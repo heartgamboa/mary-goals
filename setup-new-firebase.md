@@ -34,3 +34,4 @@
 
 ## Step 4: Update firebaseConfig.js
 Replace the config in firebaseConfig.js with your new project's config.
+
