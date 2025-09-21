@@ -1,5 +1,6 @@
 import { Stack } from "expo-router"
 import { StatusBar } from "expo-status-bar"
+<<<<<<< HEAD
 import { AuthProvider } from '../context/AuthContext'
 
 export default function RootLayout() {
@@ -18,3 +19,18 @@ export default function RootLayout() {
     </AuthProvider>
   )
 }
+=======
+
+export default function RootLayout() {
+
+  return (
+  <>
+      <StatusBar style="auto" />
+      <Stack>
+        <Stack.Screen name="goals" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+    </>
+  )
+}
+>>>>>>> 329236c89de1b765927f9e69d38a6430509a84cb

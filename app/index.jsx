@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {
   View,
@@ -125,11 +126,31 @@ export default function HomeScreen() {
       <BottomTabNavigator />
     </View>
   );
+=======
+import { Link } from 'expo-router'
+import { View, Text, StyleSheet } from 'react-native'
+
+const Home = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>
+        M A R Y - G O A L S
+      </Text>
+      <Link style={styles.link} href="/goals">
+        View Your Goals
+      </Link>
+      <Link style={styles.link} href="/goals/create">
+        Add a New Goal
+      </Link>
+    </View>
+  )
+>>>>>>> 329236c89de1b765927f9e69d38a6430509a84cb
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+<<<<<<< HEAD
     backgroundColor: '#000',
   },
   header: {
@@ -218,3 +239,21 @@ const styles = StyleSheet.create({
     color: '#ff6b6b',
   },
 });
+=======
+    alignItems: 'center'
+  },
+  title: {
+    marginVertical: 40,
+    fontSize: 28,
+  },
+  link: {
+    marginVertical: 20,
+    padding: 16,
+    backgroundColor: '#a1cc51ff',
+    color: 'white',
+    borderRadius: 8,
+  },
+})
+
+export default Home
+>>>>>>> 329236c89de1b765927f9e69d38a6430509a84cb

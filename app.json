@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "Dances",
     "slug": "dances",
+=======
+    "name": "my-goals",
+    "slug": "my-goals",
+>>>>>>> 329236c89de1b765927f9e69d38a6430509a84cb
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -32,6 +37,7 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+<<<<<<< HEAD
       ],
       [
         "expo-av",
@@ -45,6 +51,8 @@
           "photosPermission": "Allow Dances to access your photos to select images.",
           "cameraPermission": "Allow Dances to access your camera to take photos."
         }
+=======
+>>>>>>> 329236c89de1b765927f9e69d38a6430509a84cb
       ]
     ],
     "experiments": {
