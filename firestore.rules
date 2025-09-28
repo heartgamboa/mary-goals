@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection - authenticated users can read all, write own
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Images collection - authenticated users can read all, write own
+    match /images/{imageId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // Votes collection - authenticated users can read all, write own
+    match /votes/{voteId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+  }
+}
